@@ -95,8 +95,7 @@ if (!password_verify($general_current_pass_var,$_SESSION['Password'])) {
            $stop = "1";
            }
         }
-        $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
-        if (preg_match($email_pattern, $email_var)) {
+        if (!filter_var($email_var, FILTER_VALIDATE_EMAIL)) {
             $general_save_result = "<p class='alertRed'>".lang('invalid_email_address')."</p>";
             $stop = "1";
         }
