@@ -42,7 +42,6 @@ $exist_email->bindParam(':signup_email', $signup_email, PDO::PARAM_STR);
 $exist_email->execute();
 $num_un_ex = $exist_username->rowCount();
 $num_em_ex = $exist_email->rowCount();
-$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
 if($signup_fullname == null || $signup_username == null || $signup_email == null || $signup_password == null || $signup_cpassword == null){
        echo "<p class='alertRed'>".lang('please_fill_required_fields')."</p>";
 }elseif($num_un_ex == 1){
@@ -63,7 +62,7 @@ if($signup_fullname == null || $signup_username == null || $signup_email == null
         <li><span class='fa fa-times'></span> ".lang('signup_username_should_be_4').".</li>
         <li><span class='fa fa-times'></span> ".lang('signup_username_should_be_5').".</li>
     </ul>";
-}elseif (!preg_match($email_pattern,$signup_email)) {
+}elseif (!filter_var($signup_email, FILTER_VALIDATE_EMAIL)) {
     echo "<p class='alertRed'>".lang('invalid_email_address')."</p>";
 }else{
     // If who signup is the first user, make it [main admin]
