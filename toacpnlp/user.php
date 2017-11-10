@@ -105,8 +105,7 @@ if (isset($_POST['submit_uInfo'])) {
         $stop = "1";
         }
     }
-    $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
-    if (!preg_match($email_pattern, $db_email)) {
+    if (!filter_var($db_email, FILTER_VALIDATE_EMAIL)) {
         $update_result = "<p class='alertRed'>".lang('invalid_email_address')."</p>";
         $stop = "1";
     }
