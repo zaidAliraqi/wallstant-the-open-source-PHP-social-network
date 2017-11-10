@@ -1,5 +1,9 @@
 # wallstant-the-open-source-PHP-social-network
 Create your own social network for free with Wallstant social network, easy to install and fast to use .. Make people connected
+
+<h3>Main wallstant website</h3>
+for more information about whis open source PHP social network script : <br> 
+<a href='https://wallstant.github.io/'>https://wallstant.github.io/</a>
 <hr>
 <h3 style="color: black;font-size: auto;">How to install</h3>
 			<p style="color: gray">* When you <b>sign up</b> to the first time into your social network, you will be the main admin of website and you can add more admins from <b>Dashboard > users > Edit/Delete </b>.</p>
@@ -10,10 +14,6 @@ Create your own social network for free with Wallstant social network, easy to i
 				<li>upload wallstant folder to your host.</li>
 				<li>Enjoy it.</li>
 			</ol>
-<hr>
-<h3>Main wallstant website</h3>
-if you want demo link or more information about this script visit main website ot this script :
-<a href='https://wallstant.github.io/'>https://wallstant.github.io/</a>
 <hr>
 
 <h3>Social links if you want more projects or to contact with me :</h3>
