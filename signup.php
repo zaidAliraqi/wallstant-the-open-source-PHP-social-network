@@ -70,7 +70,7 @@ include_once $path."langs/set_lang.php";
     </div>
 
 <script type="text/javascript">
-$('#signupFunCode').click(function(){
+function signupUser(){
 var fullname = document.getElementById("fn").value;
 var username = document.getElementById("un").value;
 var emailAdd = document.getElementById("em").value;
@@ -98,6 +98,15 @@ error:function(err){
 alert(err);
 }
 });
+}
+$('#signupFunCode').click(function(){
+signupUser();
+});
+
+$(".login_signup_textfield").keypress( function (e) {
+    if (e.keyCode == 13) {
+        signupUser();
+    }
 });
 </script>
     </body>
