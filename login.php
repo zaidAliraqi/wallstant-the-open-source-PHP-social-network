@@ -58,7 +58,7 @@ include_once $path."langs/set_lang.php";
         </div>
 
 <script type="text/javascript">
-$('#loginFunCode').click(function(){
+function loginUser(){
 var username = document.getElementById("un").value;
 var password = document.getElementById("pd").value;
 $.ajax({
@@ -82,6 +82,14 @@ error:function(err){
 alert(err);
 }
 });
+}
+$('#loginFunCode').click(function(){
+loginUser();
+});
+$(".login_signup_textfield").keypress( function (e) {
+    if (e.keyCode == 13) {
+        loginUser();
+    }
 });
 </script>
 </body>
